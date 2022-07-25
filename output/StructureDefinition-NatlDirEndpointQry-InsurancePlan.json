@@ -16,11 +16,11 @@
     }
   ],
   "url": "http://hl7.org/fhir/us/fhir-directory-query/StructureDefinition/NatlDirEndpointQry-InsurancePlan",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "name": "NatlDirEndpointQryInsurancePlan",
   "title": "National Directory Endpoint Qry Exchange InsurancePlan",
   "status": "active",
-  "date": "2022-07-08T11:33:11-04:00",
+  "date": "2022-07-25T10:58:52-05:00",
   "publisher": "HL7 Patient Administration Working Group",
   "contact": [
     {
@@ -37,7 +37,7 @@
       ]
     }
   ],
-  "description": "An InsurancePlan is a discrete package of health insurance coverage benefits that are offered under a particular network type. A given payer’s products typically differ by network type and/or covered benefits. A plan pairs a product’s covered benefits with the particular cost sharing structure offered to a consumer. A given product may comprise multiple plans (i.e. each plan offers different cost sharing requirements for the same set of covered benefits).\r\n\r\nInsurancePlan describes a health insurance offering comprised of a list of covered benefits (i.e. the product), costs associated with those benefits (i.e. the plan), and additional information about the offering, such as who it is owned and administered by, a coverage area, contact information, etc.",
+  "description": "An InsurancePlan is a discrete package of health insurance coverage benefits that are offered under a particular network type. A given payer’s products typically differ by network type and/or covered benefits. A plan pairs a product’s covered benefits with the particular cost sharing structure offered to a consumer. A given product may comprise multiple plans (i.e. each plan offers different cost sharing requirements for the same set of covered benefits).\n\nInsurancePlan describes a health insurance offering comprised of a list of covered benefits (i.e. the product), costs associated with those benefits (i.e. the plan), and additional information about the offering, such as who it is owned and administered by, a coverage area, contact information, etc.",
   "jurisdiction": [
     {
       "coding": [

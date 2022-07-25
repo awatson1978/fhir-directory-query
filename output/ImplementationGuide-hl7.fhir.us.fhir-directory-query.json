@@ -6,11 +6,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ONCFASTNationalDirectoryEndpointQuery</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/fhir-directory-query/ImplementationGuide/hl7.fhir.us.fhir-directory-query</pre><div><p>National Directory Endpoint Query</p>\n</div></div>"
   },
   "url": "http://hl7.org/fhir/us/fhir-directory-query/ImplementationGuide/hl7.fhir.us.fhir-directory-query",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "name": "ONCFASTNationalDirectoryEndpointQuery",
   "title": "National Healthcare Directory Endpoint Query",
   "status": "active",
-  "date": "2022-07-08T11:33:11-04:00",
+  "date": "2022-07-25T10:58:52-05:00",
   "publisher": "HL7 Patient Administration Working Group",
   "contact": [
     {
@@ -44,6 +44,12 @@
     "4.0.1"
   ],
   "dependsOn": [
+    {
+      "id": "hl7tx",
+      "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+      "packageId": "hl7.terminology.r4",
+      "version": "3.1.0"
+    },
     {
       "id": "hl7_fhir_us_core",
       "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
@@ -421,7 +427,7 @@
           "reference": "StructureDefinition/NatlDirEndpointQry-InsurancePlan"
         },
         "name": "National Directory Endpoint Qry Exchange InsurancePlan",
-        "description": "An InsurancePlan is a discrete package of health insurance coverage benefits that are offered under a particular network type. A given payer’s products typically differ by network type and/or covered benefits. A plan pairs a product’s covered benefits with the particular cost sharing structure offered to a consumer. A given product may comprise multiple plans (i.e. each plan offers different cost sharing requirements for the same set of covered benefits).\r\n\r\nInsurancePlan describes a health insurance offering comprised of a list of covered benefits (i.e. the product), costs associated with those benefits (i.e. the plan), and additional information about the offering, such as who it is owned and administered by, a coverage area, contact information, etc.",
+        "description": "An InsurancePlan is a discrete package of health insurance coverage benefits that are offered under a particular network type. A given payer’s products typically differ by network type and/or covered benefits. A plan pairs a product’s covered benefits with the particular cost sharing structure offered to a consumer. A given product may comprise multiple plans (i.e. each plan offers different cost sharing requirements for the same set of covered benefits).\n\nInsurancePlan describes a health insurance offering comprised of a list of covered benefits (i.e. the product), costs associated with those benefits (i.e. the plan), and additional information about the offering, such as who it is owned and administered by, a coverage area, contact information, etc.",
         "exampleBoolean": false
       },
       {
@@ -435,7 +441,7 @@
           "reference": "StructureDefinition/NatlDirEndpointQry-Location"
         },
         "name": "National Directory Endpoint Qry Exchange Location",
-        "description": "A Location is the physical place where healthcare services are provided, practitioners are employed, \r\n                 organizations are based, etc. Locations can range in scope from a room in a building to a geographic region/area.",
+        "description": "A Location is the physical place where healthcare services are provided, practitioners are employed, \n                 organizations are based, etc. Locations can range in scope from a room in a building to a geographic region/area.",
         "exampleBoolean": false
       },
       {
@@ -449,7 +455,7 @@
           "reference": "StructureDefinition/NatlDirEndpointQry-Network"
         },
         "name": "National Directory Endpoint Qry Exchange Network",
-        "description": "A Network refers to a healthcare provider insurance network. A healthcare provider insurance network is an aggregation of organizations and individuals that deliver a set of services across a geography through health insurance products/plans. A network is typically owned by a payer.\r\n\r\nIn the NatlDir IG, individuals and organizations are represented as participants in a National Directory Exchange Network through the practitionerRole and National Directory Exchange-organizationAffiliation resources, respectively.",
+        "description": "A Network refers to a healthcare provider insurance network. A healthcare provider insurance network is an aggregation of organizations and individuals that deliver a set of services across a geography through health insurance products/plans. A network is typically owned by a payer.\n\nIn the NatlDir IG, individuals and organizations are represented as participants in a National Directory Exchange Network through the practitionerRole and National Directory Exchange-organizationAffiliation resources, respectively.",
         "exampleBoolean": false
       },
       {
@@ -463,7 +469,7 @@
           "reference": "StructureDefinition/NatlDirEndpointQry-Organization"
         },
         "name": "National Directory Endpoint Qry Exchange Organization",
-        "description": "An organization is a formal or informal grouping of people or organizations with a common purpose, such as a company, institution, corporation, community group, or healthcare practice.\r\nGuidance:   When the contact is a department name, rather than a human (e.g., patient help line), include a blank family and given name, and provide the department name in contact.name.text",
+        "description": "An organization is a formal or informal grouping of people or organizations with a common purpose, such as a company, institution, corporation, community group, or healthcare practice.\nGuidance:   When the contact is a department name, rather than a human (e.g., patient help line), include a blank family and given name, and provide the department name in contact.name.text",
         "exampleBoolean": false
       },
       {
@@ -505,7 +511,7 @@
           "reference": "StructureDefinition/NatlDirEndpointQry-PractitionerRole"
         },
         "name": "National Directory Endpoint Qry Exchange PractitionerRole",
-        "description": "PractionerRole describes details about a provider, which can be a practitioner or an organization. When the provider is a practitioner, \r\nthere may be a relationship to an organization. A provider renders services to patients at a location. When the provider is a practitioner, there may also \r\nbe a relationship to an organization. Practitioner participation in healthcare provider insurance networks may be direct or through their role at an organization.",
+        "description": "PractionerRole describes details about a provider, which can be a practitioner or an organization. When the provider is a practitioner, \nthere may be a relationship to an organization. A provider renders services to patients at a location. When the provider is a practitioner, there may also \nbe a relationship to an organization. Practitioner participation in healthcare provider insurance networks may be direct or through their role at an organization.",
         "exampleBoolean": false
       },
       {
@@ -813,7 +819,7 @@
           "reference": "StructureDefinition/newpatients"
         },
         "name": "New Patients",
-        "description": "New Patients indicates whether new patients are being accepted in general, or from a specific network.   \r\n              This extension is included in the PractitionerRole, HealthcareService, and Location profiles.  \r\n              This provides needed flexibility for specifying whether a provider accepts new patients by location and network.",
+        "description": "New Patients indicates whether new patients are being accepted in general, or from a specific network.   \n              This extension is included in the PractitionerRole, HealthcareService, and Location profiles.  \n              This provides needed flexibility for specifying whether a provider accepts new patients by location and network.",
         "exampleBoolean": false
       },
       {
@@ -1037,7 +1043,7 @@
           "reference": "ValueSet/ConsentVS"
         },
         "name": "National Directory Consent Value Set",
-        "description": "\t\r\nCodes for use in defining access levels for sharing subsets of constrained content (as an example).",
+        "description": "\t\nCodes for use in defining access levels for sharing subsets of constrained content (as an example).",
         "exampleBoolean": false
       },
       {

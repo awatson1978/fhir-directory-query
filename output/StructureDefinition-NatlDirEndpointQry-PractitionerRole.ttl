@@ -22,11 +22,11 @@
      fhir:Extension.valueCode [ fhir:value "individual" ]
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/fhir-directory-query/StructureDefinition/NatlDirEndpointQry-PractitionerRole"];
-  fhir:StructureDefinition.version [ fhir:value "0.0.1"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.0"];
   fhir:StructureDefinition.name [ fhir:value "NatlDirEndpointQryPractitionerRole"];
   fhir:StructureDefinition.title [ fhir:value "National Directory Endpoint Qry Exchange PractitionerRole"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2022-07-08T11:33:11-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2022-07-25T10:58:52-05:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "HL7 Patient Administration Working Group"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -41,7 +41,7 @@
        fhir:ContactPoint.value [ fhir:value "pafm@lists.HL7.org" ]
      ]
   ];
-  fhir:StructureDefinition.description [ fhir:value "PractionerRole describes details about a provider, which can be a practitioner or an organization. When the provider is a practitioner, \r\nthere may be a relationship to an organization. A provider renders services to patients at a location. When the provider is a practitioner, there may also \r\nbe a relationship to an organization. Practitioner participation in healthcare provider insurance networks may be direct or through their role at an organization."];
+  fhir:StructureDefinition.description [ fhir:value "PractionerRole describes details about a provider, which can be a practitioner or an organization. When the provider is a practitioner, \nthere may be a relationship to an organization. A provider renders services to patients at a location. When the provider is a practitioner, there may also \nbe a relationship to an organization. Practitioner participation in healthcare provider insurance networks may be direct or through their role at an organization."];
   fhir:StructureDefinition.jurisdiction [
      fhir:index 0;
      fhir:CodeableConcept.coding [
@@ -850,7 +850,7 @@
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.extension" ];
        fhir:ElementDefinition.sliceName [ fhir:value "newpatients" ];
        fhir:ElementDefinition.short [ fhir:value "New Patients" ];
-       fhir:ElementDefinition.definition [ fhir:value "New Patients indicates whether new patients are being accepted in general, or from a specific network.   \r\n              This extension is included in the PractitionerRole, HealthcareService, and Location profiles.  \r\n              This provides needed flexibility for specifying whether a provider accepts new patients by location and network." ];
+       fhir:ElementDefinition.definition [ fhir:value "New Patients indicates whether new patients are being accepted in general, or from a specific network.   \n              This extension is included in the PractitionerRole, HealthcareService, and Location profiles.  \n              This provides needed flexibility for specifying whether a provider accepts new patients by location and network." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.base [

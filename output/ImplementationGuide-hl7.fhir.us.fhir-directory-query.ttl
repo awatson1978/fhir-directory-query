@@ -13,11 +13,11 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ONCFASTNationalDirectoryEndpointQuery</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/fhir-directory-query/ImplementationGuide/hl7.fhir.us.fhir-directory-query</pre><div><p>National Directory Endpoint Query</p>\n</div></div>"
   ];
   fhir:ImplementationGuide.url [ fhir:value "http://hl7.org/fhir/us/fhir-directory-query/ImplementationGuide/hl7.fhir.us.fhir-directory-query"];
-  fhir:ImplementationGuide.version [ fhir:value "0.0.1"];
+  fhir:ImplementationGuide.version [ fhir:value "0.1.0"];
   fhir:ImplementationGuide.name [ fhir:value "ONCFASTNationalDirectoryEndpointQuery"];
   fhir:ImplementationGuide.title [ fhir:value "National Healthcare Directory Endpoint Query"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2022-07-08T11:33:11-04:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2022-07-25T10:58:52-05:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "HL7 Patient Administration Working Group"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -49,6 +49,15 @@
   ];
   fhir:ImplementationGuide.dependsOn [
      fhir:index 0;
+     fhir:Element.id [ fhir:value "hl7tx" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://terminology.hl7.org/ImplementationGuide/hl7.terminology";
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.terminology.r4" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "3.1.0" ]
+  ], [
+     fhir:index 1;
      fhir:Element.id [ fhir:value "hl7_fhir_us_core" ];
      fhir:ImplementationGuide.dependsOn.uri [
        fhir:value "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core";
@@ -403,7 +412,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/NatlDirEndpointQry-InsurancePlan" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "National Directory Endpoint Qry Exchange InsurancePlan" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An InsurancePlan is a discrete package of health insurance coverage benefits that are offered under a particular network type. A given payer’s products typically differ by network type and/or covered benefits. A plan pairs a product’s covered benefits with the particular cost sharing structure offered to a consumer. A given product may comprise multiple plans (i.e. each plan offers different cost sharing requirements for the same set of covered benefits).\r\n\r\nInsurancePlan describes a health insurance offering comprised of a list of covered benefits (i.e. the product), costs associated with those benefits (i.e. the plan), and additional information about the offering, such as who it is owned and administered by, a coverage area, contact information, etc." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An InsurancePlan is a discrete package of health insurance coverage benefits that are offered under a particular network type. A given payer’s products typically differ by network type and/or covered benefits. A plan pairs a product’s covered benefits with the particular cost sharing structure offered to a consumer. A given product may comprise multiple plans (i.e. each plan offers different cost sharing requirements for the same set of covered benefits).\n\nInsurancePlan describes a health insurance offering comprised of a list of covered benefits (i.e. the product), costs associated with those benefits (i.e. the plan), and additional information about the offering, such as who it is owned and administered by, a coverage area, contact information, etc." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 5;
@@ -417,7 +426,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/NatlDirEndpointQry-Location" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "National Directory Endpoint Qry Exchange Location" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Location is the physical place where healthcare services are provided, practitioners are employed, \r\n                 organizations are based, etc. Locations can range in scope from a room in a building to a geographic region/area." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Location is the physical place where healthcare services are provided, practitioners are employed, \n                 organizations are based, etc. Locations can range in scope from a room in a building to a geographic region/area." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 6;
@@ -431,7 +440,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/NatlDirEndpointQry-Network" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "National Directory Endpoint Qry Exchange Network" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Network refers to a healthcare provider insurance network. A healthcare provider insurance network is an aggregation of organizations and individuals that deliver a set of services across a geography through health insurance products/plans. A network is typically owned by a payer.\r\n\r\nIn the NatlDir IG, individuals and organizations are represented as participants in a National Directory Exchange Network through the practitionerRole and National Directory Exchange-organizationAffiliation resources, respectively." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Network refers to a healthcare provider insurance network. A healthcare provider insurance network is an aggregation of organizations and individuals that deliver a set of services across a geography through health insurance products/plans. A network is typically owned by a payer.\n\nIn the NatlDir IG, individuals and organizations are represented as participants in a National Directory Exchange Network through the practitionerRole and National Directory Exchange-organizationAffiliation resources, respectively." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 7;
@@ -445,7 +454,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/NatlDirEndpointQry-Organization" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "National Directory Endpoint Qry Exchange Organization" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An organization is a formal or informal grouping of people or organizations with a common purpose, such as a company, institution, corporation, community group, or healthcare practice.\r\nGuidance:   When the contact is a department name, rather than a human (e.g., patient help line), include a blank family and given name, and provide the department name in contact.name.text" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An organization is a formal or informal grouping of people or organizations with a common purpose, such as a company, institution, corporation, community group, or healthcare practice.\nGuidance:   When the contact is a department name, rather than a human (e.g., patient help line), include a blank family and given name, and provide the department name in contact.name.text" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 8;
@@ -487,7 +496,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/NatlDirEndpointQry-PractitionerRole" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "National Directory Endpoint Qry Exchange PractitionerRole" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "PractionerRole describes details about a provider, which can be a practitioner or an organization. When the provider is a practitioner, \r\nthere may be a relationship to an organization. A provider renders services to patients at a location. When the provider is a practitioner, there may also \r\nbe a relationship to an organization. Practitioner participation in healthcare provider insurance networks may be direct or through their role at an organization." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "PractionerRole describes details about a provider, which can be a practitioner or an organization. When the provider is a practitioner, \nthere may be a relationship to an organization. A provider renders services to patients at a location. When the provider is a practitioner, there may also \nbe a relationship to an organization. Practitioner participation in healthcare provider insurance networks may be direct or through their role at an organization." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 11;
@@ -795,7 +804,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/newpatients" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "New Patients" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "New Patients indicates whether new patients are being accepted in general, or from a specific network.   \r\n              This extension is included in the PractitionerRole, HealthcareService, and Location profiles.  \r\n              This provides needed flexibility for specifying whether a provider accepts new patients by location and network." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "New Patients indicates whether new patients are being accepted in general, or from a specific network.   \n              This extension is included in the PractitionerRole, HealthcareService, and Location profiles.  \n              This provides needed flexibility for specifying whether a provider accepts new patients by location and network." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 33;
@@ -1019,7 +1028,7 @@
          fhir:Reference.reference [ fhir:value "ValueSet/ConsentVS" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "National Directory Consent Value Set" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "	\r\nCodes for use in defining access levels for sharing subsets of constrained content (as an example)." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "	\nCodes for use in defining access levels for sharing subsets of constrained content (as an example)." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 49;

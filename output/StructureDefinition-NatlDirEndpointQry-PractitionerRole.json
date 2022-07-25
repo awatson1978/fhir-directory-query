@@ -16,11 +16,11 @@
     }
   ],
   "url": "http://hl7.org/fhir/us/fhir-directory-query/StructureDefinition/NatlDirEndpointQry-PractitionerRole",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "name": "NatlDirEndpointQryPractitionerRole",
   "title": "National Directory Endpoint Qry Exchange PractitionerRole",
   "status": "active",
-  "date": "2022-07-08T11:33:11-04:00",
+  "date": "2022-07-25T10:58:52-05:00",
   "publisher": "HL7 Patient Administration Working Group",
   "contact": [
     {
@@ -37,7 +37,7 @@
       ]
     }
   ],
-  "description": "PractionerRole describes details about a provider, which can be a practitioner or an organization. When the provider is a practitioner, \r\nthere may be a relationship to an organization. A provider renders services to patients at a location. When the provider is a practitioner, there may also \r\nbe a relationship to an organization. Practitioner participation in healthcare provider insurance networks may be direct or through their role at an organization.",
+  "description": "PractionerRole describes details about a provider, which can be a practitioner or an organization. When the provider is a practitioner, \nthere may be a relationship to an organization. A provider renders services to patients at a location. When the provider is a practitioner, there may also \nbe a relationship to an organization. Practitioner participation in healthcare provider insurance networks may be direct or through their role at an organization.",
   "jurisdiction": [
     {
       "coding": [
@@ -790,7 +790,7 @@
         "path": "PractitionerRole.extension",
         "sliceName": "newpatients",
         "short": "New Patients",
-        "definition": "New Patients indicates whether new patients are being accepted in general, or from a specific network.   \r\n              This extension is included in the PractitionerRole, HealthcareService, and Location profiles.  \r\n              This provides needed flexibility for specifying whether a provider accepts new patients by location and network.",
+        "definition": "New Patients indicates whether new patients are being accepted in general, or from a specific network.   \n              This extension is included in the PractitionerRole, HealthcareService, and Location profiles.  \n              This provides needed flexibility for specifying whether a provider accepts new patients by location and network.",
         "min": 0,
         "max": "*",
         "base": {

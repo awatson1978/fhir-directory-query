@@ -6,11 +6,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-LanguageProficiencyCS.html\"><code>http://hl7.org/fhir/us/fhir-directory-query/CodeSystem/LanguageProficiencyCS</code></a></li></ul></div>"
   },
   "url": "http://hl7.org/fhir/us/fhir-directory-query/ValueSet/LanguageProficiencyVS",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "name": "LanguageProficiencyVS",
   "title": "Language Proficiency",
   "status": "active",
-  "date": "2022-07-08T11:33:11-04:00",
+  "date": "2022-07-25T10:58:52-05:00",
   "publisher": "HL7 Patient Administration Working Group",
   "contact": [
     {

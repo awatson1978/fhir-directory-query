@@ -12,7 +12,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.fhir-directory-query
 canonical: http://hl7.org/fhir/us/fhir-directory-query
-version: 0.0.1
+version: 0.1.0
 name: ONC FAST National Directory Endpoint Query
 title: National Healthcare Directory Endpoint Query
 status: active
@@ -58,4 +58,6 @@ menu:
     Provider Expanded Conformance Requirements  : CapabilityStatement-fhir-directory-query-provider-expanded.html
   Examples      : examples.html
   Downloads     : downloads.html
+  Artifacts: artifacts.html
+
   
